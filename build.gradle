@@ -1,0 +1,30 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral() // 메이븐 저장소 - 개발자들이 만든 라이브러리를 업로드하기 까다로움
+        jcenter() // 라이브러리 업로드를 간단하게 개선, jcenter에 업로드 시 mavenCentral에 자동 업로드 가능
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+// 자바와 스프링 부트를 사용하기 위한 필수 플러그인
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.jojoldu.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
