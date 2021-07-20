@@ -2,3 +2,6 @@
 .gradle
 .idea
 build
+
+# security
+application-oauth.properties
