@@ -4,4 +4,4 @@
 build
 
 # security
-application-oauth.properties
+application-oauth.yml
