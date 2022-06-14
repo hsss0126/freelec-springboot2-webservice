@@ -1,5 +1,6 @@
 language: java
-jdk: openjdk8
+jdk:
+  - openjdk8
 
 # 어느 브랜치가 푸시될 때 수행할지 지정
 branches:
