@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .headers().frameOptions().disable()
                 .and()
                     .authorizeRequests()
-                    .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll() // 모두 허용
+                    .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll() // 모두 허용
                     .antMatchers("/api/v1/**").hasRole(Role.USER.name()) // USER권한 사용자만 허용
                     .anyRequest().authenticated() // 그 외 요청은 인증된 사용자에게만 허용
                 .and()
